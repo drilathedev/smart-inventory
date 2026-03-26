@@ -1,9 +1,9 @@
 <template>
-  <div class="h-full bg-n-0 border-r border-n-200 flex flex-col overflow-hidden">
+  <div class="h-full bg-n-0/95 backdrop-blur border-r border-n-200/90 flex flex-col overflow-hidden">
 
     <!-- Brand -->
     <div class="px-3 pt-4 pb-3 flex items-center gap-2.5 shrink-0">
-      <div class="size-8 rounded-lg bg-g-500 flex items-center justify-center shadow-green shrink-0">
+      <div class="size-8 rounded-xl bg-g-500 flex items-center justify-center shadow-green shrink-0">
         <Icon name="lucide:leaf" class="size-[15px] text-white" />
       </div>
       <Transition name="fade">
@@ -21,7 +21,7 @@
     <nav class="flex-1 px-2 py-1 flex flex-col gap-0.5 overflow-y-auto no-scrollbar">
       <NuxtLink
         v-for="item in navItems" :key="item.to" :to="item.to"
-        class="flex items-center gap-3 px-2.5 py-2.5 rounded-lg text-[13px] font-medium transition-all duration-150 group relative"
+        class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl text-[13px] font-medium transition-all duration-150 group relative"
         :class="isActive(item.to)
           ? 'bg-g-50 text-g-700 font-semibold'
           : 'text-n-500 hover:bg-n-50 hover:text-n-900'"
@@ -57,7 +57,7 @@
     <div class="px-2 pb-3 pt-2 border-t border-n-100 shrink-0">
       <NuxtLink
         to="/settings"
-        class="flex items-center gap-3 px-2.5 py-2 rounded-lg text-[13px] font-medium text-n-400 hover:bg-n-50 hover:text-n-700 transition-all group relative"
+        class="flex items-center gap-3 px-2.5 py-2 rounded-xl text-[13px] font-medium text-n-400 hover:bg-n-50 hover:text-n-700 transition-all group relative"
         :class="isActive('/settings') ? 'bg-g-50 text-g-700' : ''"
         @click="mobile && $emit('close')"
       >

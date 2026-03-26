@@ -4,7 +4,7 @@
       <div
         v-if="ui.toast"
         :key="ui.toast.id"
-        class="fixed z-[100] flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl text-sm font-semibold max-w-sm"
+        class="fixed z-[100] flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-xl text-sm font-semibold max-w-sm border border-white/20 backdrop-blur"
         :class="[cls, 'bottom-[calc(var(--nav-h)+12px)] md:bottom-5 right-4']"
       >
         <Icon :name="icon" class="size-4 shrink-0" />

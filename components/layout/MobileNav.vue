@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed bottom-0 inset-x-0 z-30 bg-n-0 border-t border-n-200"
+    class="fixed bottom-0 inset-x-0 z-30 bg-n-0/95 backdrop-blur border-t border-n-200/90 shadow-[0_-8px_24px_rgba(26,23,20,0.06)]"
     style="height: calc(var(--nav-h) + var(--safe-bottom)); padding-bottom: var(--safe-bottom)"
   >
     <div class="flex h-full items-stretch">
@@ -22,7 +22,7 @@
             class="absolute -top-1.5 -right-2 min-w-[16px] h-4 rounded-full bg-danger-500 text-white text-2xs font-bold flex items-center justify-center px-1 leading-none"
           >{{ item.count > 9 ? '9+' : item.count }}</span>
         </div>
-        <span class="text-2xs font-semibold leading-none">{{ item.label }}</span>
+        <span class="text-2xs font-semibold leading-none tracking-[0.01em]">{{ item.label }}</span>
       </NuxtLink>
     </div>
   </nav>

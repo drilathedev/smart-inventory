@@ -45,21 +45,21 @@
 }
 
 @layer components {
-  .card        { @apply bg-n-0 rounded-xl border border-n-200 shadow-card; }
-  .card-flush  { @apply bg-n-0 rounded-xl border border-n-200; }
+  .card        { @apply bg-n-0 rounded-2xl border border-n-200/90 shadow-card; }
+  .card-flush  { @apply bg-n-0 rounded-2xl border border-n-200/90; }
 
   /* Buttons */
   .btn { @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-150 select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-40 disabled:pointer-events-none; }
-  .btn-primary   { @apply btn bg-g-500 text-white text-sm px-4 py-2.5 rounded-lg hover:bg-g-600 active:bg-g-700 active:scale-[0.98] focus-visible:ring-g-400 shadow-green; }
-  .btn-secondary { @apply btn bg-n-0 text-n-700 text-sm px-4 py-2.5 rounded-lg border border-n-200 hover:bg-n-50 hover:border-n-300 active:bg-n-100 active:scale-[0.98] focus-visible:ring-g-400 shadow-card; }
+  .btn-primary   { @apply btn bg-g-500 text-white text-sm px-4 py-2.5 rounded-xl hover:bg-g-600 active:bg-g-700 active:scale-[0.98] focus-visible:ring-g-400 shadow-green; }
+  .btn-secondary { @apply btn bg-n-0 text-n-700 text-sm px-4 py-2.5 rounded-xl border border-n-200 hover:bg-n-50 hover:border-n-300 active:bg-n-100 active:scale-[0.98] focus-visible:ring-g-400 shadow-card; }
   .btn-ghost     { @apply btn bg-transparent text-n-500 text-sm px-3 py-2 rounded-lg hover:bg-n-100 hover:text-n-900 active:bg-n-200 focus-visible:ring-g-400; }
   .btn-danger    { @apply btn bg-danger-500 text-white text-sm px-4 py-2.5 rounded-lg hover:bg-danger-600 active:scale-[0.98] focus-visible:ring-danger-400; }
-  .btn-icon      { @apply btn size-9 rounded-lg bg-transparent text-n-400 hover:bg-n-100 hover:text-n-800 active:bg-n-200 focus-visible:ring-g-400; }
+  .btn-icon      { @apply btn size-9 rounded-xl bg-transparent text-n-400 hover:bg-n-100 hover:text-n-800 active:bg-n-200 focus-visible:ring-g-400; }
   .btn-pill        { @apply btn px-3.5 py-1.5 rounded-full text-xs bg-n-100 text-n-600 hover:bg-n-200 hover:text-n-900 whitespace-nowrap; }
   .btn-pill-active { @apply btn-pill bg-g-500 text-white hover:bg-g-600 hover:text-white shadow-green; }
 
   /* Inputs */
-  .input    { @apply w-full px-3.5 py-2.5 bg-n-0 border border-n-200 rounded-lg text-sm text-n-900 placeholder-n-400 focus:outline-none focus:ring-2 focus:ring-g-400/25 focus:border-g-400 transition-all duration-150; }
+  .input    { @apply w-full px-3.5 py-2.5 bg-n-0 border border-n-200 rounded-xl text-sm text-n-900 placeholder-n-400 focus:outline-none focus:ring-2 focus:ring-g-400/25 focus:border-g-400 transition-all duration-150 shadow-inner-sm; }
   .input-sm { @apply input py-2 text-xs; }
   .label    { @apply block text-xs font-bold text-n-400 mb-1.5 uppercase tracking-wider; }
   .label-md { @apply block text-sm font-medium text-n-700 mb-1.5; }
@@ -72,7 +72,7 @@
   .badge-gray   { @apply badge bg-n-100 text-n-500 ring-1 ring-n-200; }
 
   /* Typography */
-  .page-title  { @apply text-[22px] font-bold text-n-900 leading-tight tracking-tight; }
+  .page-title  { @apply text-[22px] font-bold text-n-900 leading-tight tracking-[-0.015em]; }
   .page-sub    { @apply text-sm text-n-400 leading-relaxed; }
   .card-title  { @apply text-sm font-bold text-n-800; }
   .table-th    { @apply text-2xs font-bold text-n-400 uppercase tracking-widest; }
@@ -88,7 +88,7 @@
   .alert-green { @apply rounded-xl p-4 bg-g-25 border border-g-100; }
 
   /* List rows */
-  .list-row          { @apply flex items-center gap-3 px-4 py-3 hover:bg-n-25 transition-colors; }
+  .list-row          { @apply flex items-center gap-3 px-4 py-3 hover:bg-n-25 transition-colors duration-150; }
   .list-row + .list-row { @apply border-t border-n-100; }
 
   /* FAB */
@@ -105,6 +105,12 @@
 }
 
 @layer utilities {
+  .app-bg {
+    background:
+      radial-gradient(1200px 380px at 20% -10%, rgba(47, 107, 63, 0.08), transparent 60%),
+      radial-gradient(900px 320px at 100% 0%, rgba(208, 184, 140, 0.1), transparent 55%),
+      #f9f7f5;
+  }
   .app-shell {
     height: 100vh;
     height: 100dvh;
@@ -132,4 +138,13 @@
   .stagger-2 { animation-delay: 120ms; }
   .stagger-3 { animation-delay: 180ms; }
   .stagger-4 { animation-delay: 240ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="app-shell flex overflow-hidden bg-n-50">
+  <div class="app-shell app-bg flex overflow-hidden">
 
     <!-- Desktop sidebar -->
     <aside
@@ -29,7 +29,7 @@
     <main class="flex-1 flex flex-col min-w-0 overflow-hidden">
 
       <!-- Top header -->
-      <header class="h-14 shrink-0 bg-n-0 border-b border-n-200 flex items-center px-4 gap-3 md:px-5">
+      <header class="h-14 shrink-0 bg-n-0/90 backdrop-blur border-b border-n-200/80 flex items-center px-4 gap-3 md:px-5">
         <button class="btn-icon md:hidden" @click="ui.mobileMenuOpen = true">
           <Icon name="lucide:menu" class="size-5" />
         </button>

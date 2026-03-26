@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-screen overflow-hidden bg-n-50">
+  <div class="app-shell flex overflow-hidden bg-n-50">
 
     <!-- Desktop sidebar -->
     <aside
@@ -56,10 +56,8 @@
       </header>
 
       <!-- Scrollable content -->
-      <div class="flex-1 overflow-y-auto" style="padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px))">
-        <div class="md:pb-0">
-          <slot />
-        </div>
+      <div class="app-scroll flex-1 pb-[calc(var(--mobile-nav-offset)+8px)] md:pb-0">
+        <slot />
       </div>
     </main>
 

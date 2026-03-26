@@ -1,7 +1,7 @@
 <template>
   <nav
     class="fixed bottom-0 inset-x-0 z-30 bg-n-0 border-t border-n-200"
-    style="height: var(--nav-h); padding-bottom: env(safe-area-inset-bottom, 0px)"
+    style="height: calc(var(--nav-h) + var(--safe-bottom)); padding-bottom: var(--safe-bottom)"
   >
     <div class="flex h-full items-stretch">
       <NuxtLink

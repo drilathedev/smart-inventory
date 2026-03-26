@@ -5,7 +5,7 @@
       <span v-if="total>0" class="absolute top-1.5 right-1.5 size-2 rounded-full bg-danger-500 animate-pulse-dot" />
     </button>
     <Transition name="dd">
-      <div v-if="open" class="absolute right-0 top-11 w-80 card shadow-lg z-50 overflow-hidden" v-click-outside="()=>open=false">
+      <div v-if="open" class="absolute right-0 top-11 w-80 card shadow-lg z-[140] overflow-hidden" v-click-outside="()=>open=false">
         <div class="px-4 py-3 border-b border-n-100 flex items-center justify-between">
           <h3 class="card-title">Alerts</h3>
           <span v-if="total" class="badge-red">{{ total }}</span>

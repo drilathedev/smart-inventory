@@ -19,7 +19,7 @@
               <Icon name="lucide:x" class="size-4" />
             </button>
           </div>
-          <div class="overflow-y-auto flex-1"><slot /></div>
+          <div class="overflow-y-auto overflow-x-hidden flex-1"><slot /></div>
           <div v-if="$slots.footer" class="border-t border-n-100 px-5 py-4 bg-n-25 shrink-0 pb-safe">
             <slot name="footer" />
           </div>

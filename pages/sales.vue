@@ -87,8 +87,8 @@
           <h2 class="card-title">Recent transactions</h2>
           <span class="badge-gray">{{ sales.sales.length }} total</span>
         </div>
-        <div class="overflow-x-auto">
-          <table class="w-full">
+        <div class="overflow-x-hidden">
+          <table class="w-full table-fixed">
             <thead class="bg-n-25 border-b border-n-100">
               <tr>
                 <th class="table-th text-left px-4 py-2.5">Time</th>

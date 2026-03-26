@@ -62,8 +62,8 @@
       </div>
 
       <!-- Desktop table -->
-      <div class="hidden md:block overflow-x-auto">
-        <table class="w-full">
+      <div class="hidden md:block overflow-x-hidden">
+        <table class="w-full table-fixed">
           <thead class="bg-n-25 border-b border-n-100">
             <tr>
               <th class="table-th text-left px-5 py-3">Product</th>

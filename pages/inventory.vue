@@ -67,8 +67,8 @@
 
     <!-- Desktop table -->
     <div class="hidden md:block card overflow-hidden animate-up stagger-2">
-      <div class="overflow-x-auto">
-        <table class="w-full">
+      <div class="overflow-x-hidden">
+        <table class="w-full table-fixed">
           <thead class="bg-n-25 border-b border-n-200">
             <tr>
               <th class="table-th text-left px-5 py-3">Product</th>

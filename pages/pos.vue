@@ -10,7 +10,7 @@
           <Icon name="lucide:search" class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-n-300" />
           <input v-model="search" class="input pl-9" placeholder="Search products…" />
         </div>
-        <div class="flex gap-1.5 overflow-x-auto no-scrollbar pb-0.5">
+        <div class="flex flex-wrap gap-1.5 pb-0.5">
           <button :class="activeCat==='' ? 'btn-pill-active' : 'btn-pill'" @click="activeCat=''">All</button>
           <button v-for="c in products.categories" :key="c" :class="activeCat===c ? 'btn-pill-active' : 'btn-pill'" @click="activeCat=c">{{ c }}</button>
         </div>

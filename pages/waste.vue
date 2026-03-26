@@ -113,8 +113,8 @@
         <p class="text-sm font-semibold text-n-500">No waste recorded yet</p>
         <p class="text-2xs text-n-300 mt-1">Use "Waste/expired" in stock adjustments to log losses</p>
       </div>
-      <div v-else class="overflow-x-auto">
-        <table class="w-full">
+      <div v-else class="overflow-x-hidden">
+        <table class="w-full table-fixed">
           <thead class="bg-n-25 border-b border-n-100">
             <tr>
               <th class="table-th text-left px-4 py-2.5">Product</th>

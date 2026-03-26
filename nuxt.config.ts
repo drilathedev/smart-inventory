@@ -3,13 +3,21 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   modules: [
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxt/icon',
   ],
 
   css: ['~/assets/css/main.css'],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {
+        config: 'tailwind.config.cjs',
+      },
+      autoprefixer: {},
+    },
+  },
 
   app: {
     head: {

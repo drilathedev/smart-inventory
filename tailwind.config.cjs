@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
@@ -39,7 +39,7 @@ export default {
         },
         // Semantic
         danger:  { 50:'#fff1f1', 100:'#ffd7d7', 400:'#f87171', 500:'#ef4444', 600:'#dc2626' },
-        warn:    { 50:'#fffbeb', 100:'#fef3c7', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
+        warn:    { 50:'#fffbeb', 100:'#fef3c7', 200:'#fde68a', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
         info:    { 50:'#eff6ff', 500:'#3b82f6' },
       },
       fontFamily: {
@@ -85,3 +85,4 @@ export default {
   },
   plugins: [],
 }
+
